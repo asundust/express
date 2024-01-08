@@ -1,6 +1,16 @@
 {
     "name": "asundust/express",
-    "description": "(2024年维护中)支持快递鸟、快递100的快递查询SDK",
+    "alias": "快递鸟、快递100的快递查询SDK",
+    "description": "(2024年维护中)支持快递鸟、快递100的快递查询SDK 支持Laravel",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "extension",
+        "express",
+        "express100",
+        "expressniao"
+    ],
+    "homepage": "https://github.com/asundust/dcat-auth-google-2fa",
     "license": "MIT",
     "authors": [
         {
