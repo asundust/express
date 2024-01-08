@@ -3,7 +3,7 @@
 <p align="center">支持快递鸟、快递100的快递查询SDK</p>
 
 [![Build Status](https://travis-ci.org/asundust/express.svg?branch=master)](https://travis-ci.org/asundust/express)
-[![StyleCI build status](https://github.styleci.io/repos/669991722/shield)](https://github.styleci.io/repos/669991722)
+[![StyleCI build status](https://github.styleci.io/repos/740377712/shield)](https://github.styleci.io/repos/740377712)
 [![Latest Stable Version](https://poser.pugx.org/asundust/express/v/stable)](https://packagist.org/packages/asundust/express)
 [![Total Downloads](https://poser.pugx.org/asundust/express/downloads)](https://packagist.org/packages/asundust/express)
 [![License](https://poser.pugx.org/asundust/express/license)](https://packagist.org/packages/asundust/express)
