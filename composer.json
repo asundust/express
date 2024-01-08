@@ -1,11 +1,11 @@
 {
-    "name": "tudouer/express",
-    "description": "支持快递鸟、快递100的快递查询SDK",
+    "name": "asundust/express",
+    "description": "(2024年维护中)支持快递鸟、快递100的快递查询SDK",
     "license": "MIT",
     "authors": [
         {
-            "name": "Flex",
-            "email": "2345@mail.com"
+            "name": "asundust",
+            "email": "asundust@qq.com"
         }
     ],
     "require": {
@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Flex\\Express\\": "./src"
+            "Asundust\\Express\\": "./src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Flex\\Express\\ServiceProvider"
+                "Asundust\\Express\\ServiceProvider"
             ]
         }
     }

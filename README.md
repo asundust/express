@@ -2,26 +2,28 @@
 
 <p align="center">支持快递鸟、快递100的快递查询SDK</p>
 
-[![Build Status](https://travis-ci.org/inbjo/express.svg?branch=master)](https://travis-ci.org/inbjo/express)
-[![StyleCI build status](https://github.styleci.io/repos/178779366/shield)](https://github.styleci.io/repos/178779366)
-[![Latest Stable Version](https://poser.pugx.org/flex/express/v/stable)](https://packagist.org/packages/flex/express)
-[![Total Downloads](https://poser.pugx.org/flex/express/downloads)](https://packagist.org/packages/flex/express)
-[![License](https://poser.pugx.org/flex/express/license)](https://packagist.org/packages/flex/express)
+[![Build Status](https://travis-ci.org/asundust/express.svg?branch=master)](https://travis-ci.org/asundust/express)
+[![StyleCI build status](https://github.styleci.io/repos/669991722/shield)](https://github.styleci.io/repos/669991722)
+[![Latest Stable Version](https://poser.pugx.org/asundust/express/v/stable)](https://packagist.org/packages/asundust/express)
+[![Total Downloads](https://poser.pugx.org/asundust/express/downloads)](https://packagist.org/packages/asundust/express)
+[![License](https://poser.pugx.org/asundust/express/license)](https://packagist.org/packages/asundust/express)
 
+## Fork声明
+- **无人维护，接盘维护一下，尽量保证及时维护**
 
 ## 安装
 
 ```shell
-$ composer require flex/express -vvv
+$ composer require asundust/express
 ```
 ## 配置
 
 在使用本扩展之前，你需要去 [快递100](https://www.kuaidi100.com/openapi/applyapi.shtml) 或者 [快递鸟](http://www.kdniao.com/reg) 注册申请，获取到APP_id和APP_key。
 
-## Usage
+## 使用
 ### 快递100
 ```php
-use Flex\Express\Express100;
+use Asundust\Express\Express100;
 
 $express = new Express100('app_id','app_key');
 $info = $express->track($tracking_code, $shipping_code, $phone); //快递单号 物流公司编号 收件人手机号(顺丰必填 其他快递选填)
@@ -58,7 +60,7 @@ $info = $express->track($tracking_code, $shipping_code, $phone); //快递单号 
 
 ### 快递鸟
 ```php
-use Flex\Express\ExpressBird;
+use Asundust\Express\ExpressBird;
 
 $express = new ExpressBird('app_id','app_key'); 
 $info = $express->track($tracking_code, $shipping_code，$order_code); //快递单号 物流公司编号 订单编号(选填)
@@ -90,7 +92,7 @@ $info = $express->track($tracking_code, $shipping_code，$order_code); //快递�
 ```
 ### 通用方法
 ```php
-use Flex\Express\Express;
+use Asundust\Express\Express;
 
 
 $express = new Express($app_id,$app_key,$type); //$type支持类型'express100'、'expressbird'
@@ -122,7 +124,7 @@ $info = $express->track($tracking_code, $shipping_code，$additional); ////查�
  EXPRESS_TYPE=express100
  ```
  
- 可以用两种方式来获取 `Flex\Express\Express` 实例：
+ 可以用两种方式来获取 `Asundust\Express\Express` 实例：
  
  #### 方法参数注入
  

@@ -1,18 +1,9 @@
 <?php
 
-/*
- * This file is part of the flex/express.
- *
- * (c) Flex<2345@mail.com>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
+namespace Asundust\Express;
 
-namespace Flex\Express;
-
-use Flex\Express\Exceptions\HttpException;
-use Flex\Express\Exceptions\InvalidArgumentException;
+use Asundust\Express\Exceptions\HttpException;
+use Asundust\Express\Exceptions\InvalidArgumentException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -43,7 +34,7 @@ class ExpressBird
      *
      * @param string $tracking_code 快递单号
      * @param string $shipping_code 物流公司编号
-     * @param string $order_code    订单编号(选填)
+     * @param string $order_code 订单编号(选填)
      *
      * @return string
      *
@@ -73,13 +64,13 @@ class ExpressBird
         ];
         $requestData = json_encode($requestData);
 
-        $post = array(
+        $post = [
             'EBusinessID' => $this->app_id,
             'RequestType' => '1002',
             'RequestData' => urlencode($requestData),
             'DataType' => '2',
             'DataSign' => $this->encrypt($requestData, $this->app_key),
-        );
+        ];
 
         try {
             $response = $this->getHttpClient()->request('POST', $this->api, [
@@ -102,7 +93,7 @@ class ExpressBird
      */
     private function encrypt($data, $appkey)
     {
-        return urlencode(base64_encode(md5($data.$appkey)));
+        return urlencode(base64_encode(md5($data . $appkey)));
     }
 
     /**
